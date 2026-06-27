@@ -1,0 +1,137 @@
+/* Section 2 — About */
+.about {
+  background-color: var(--gray-100);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about__images {
+  position: relative;
+}
+
+.about__img {
+  border-radius: var(--radius-lg);
+  background-size: cover;
+  background-position: center;
+}
+
+.about__img--main {
+  width: 85%;
+  height: 420px;
+  background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80');
+  box-shadow: var(--shadow-lg);
+}
+
+.about__img--secondary {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 55%;
+  height: 240px;
+  background-image: url('https://images.unsplash.com/photo-1559337352-11d035aa65de?w=600&q=80');
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.about__badge {
+  position: absolute;
+  top: 30px;
+  right: 10%;
+  background-color: var(--navy);
+  color: var(--white);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.about__badge-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold-light);
+}
+
+.about__badge-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-top: 4px;
+}
+
+.about__features {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about__features li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.about__feature-icon {
+  color: var(--gold);
+  font-size: 0.6rem;
+  margin-top: 8px;
+}
+
+.about__features strong {
+  display: block;
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.about__features p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+}
+
+@media (max-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about__images {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__img--main {
+    width: 100%;
+    height: 300px;
+  }
+
+  .about__img--secondary {
+    width: 70%;
+    height: 180px;
+  }
+
+  .about__badge {
+    width: 90px;
+    height: 90px;
+    right: 0;
+  }
+
+  .about__badge-number {
+    font-size: 1.8rem;
+  }
+}
